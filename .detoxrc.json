@@ -4,7 +4,7 @@
   "configurations": {
     "ios": {
       "type": "ios.simulator",
-      "build": "xcodebuild -workspace ios/BitriseTestProject.xcworkspace  -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+      "build": "xcodebuild -workspace ios/BitriseTestProject.xcworkspace -scheme BitriseTestProject -configuration Release -sdk iphonesimulator13.5 -derivedDataPath ios/build",
       "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/BitriseTestProject.app",
       "device": {
         "type": "iPhone 8"

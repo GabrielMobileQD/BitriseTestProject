@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "appium": "appium",
+    "appium-doctor": "appium-doctor",
+    "cucumber": "cucumber-js",
+    "test:e2e": "jest --testMatch=\"**/features/**/*appium.js\" --testTimeout=30000"
   },
   "dependencies": {
     "jest-circus": "^26.0.1",
@@ -24,13 +28,17 @@
     "@types/react-test-renderer": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
+    "appium": "^1.18.2",
+    "appium-doctor": "^1.15.3",
     "babel-jest": "^25.1.0",
+    "cucumber": "^7.0.0-rc.0",
     "detox": "^17.5.1",
     "eslint": "^6.5.1",
     "jest": "^26.0.1",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "wd": "^1.13.0"
   },
   "jest": {
     "preset": "react-native",
