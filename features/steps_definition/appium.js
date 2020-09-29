@@ -4,8 +4,8 @@ const PORT = 4723;
 
 const config = {
   platformName: 'Android',
-  deviceName: 'emulator',
-  app: '../../android/app/build/outputs/apk/release/app-release.apk', // relative to root of project
+  deviceName: 'Nexus_One_API_29',
+  app: 'android/app/build/outputs/apk/release/app-release.apk', // relative to root of project
   appPackage: 'com.bitrisetestproject',
   appActivity: 'com.bitrisetestproject.MainActivity',
   automationName: 'uiautomator2',
