@@ -25,7 +25,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-      - name: Run a one-line script
+      - name: Install npm dependencies
+        run: npm install
+      - name: Run a one-line script and no
         run: echo Now, im gonna run an Android Emulator!
       - name: run an Android Emulator.
         uses: reactivecircus/android-emulator-runner@v2
