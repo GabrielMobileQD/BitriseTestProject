@@ -31,8 +31,9 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
          api-level: 29
-         profile: Nexus One  
-         script: ./gradlew connectedCheck
+         script: |
+              ./gradlew connectedCheck
+              echo Oi android emulator.
 
 #       # Runs a set of commands using the runners shell
 #       - name: Greetings for android build
