@@ -32,7 +32,7 @@ jobs:
         with:
          api-level: 29
          script: |
-              ./gradlew connectedCheck
+              cd android && ./gradlew connectedCheck
               echo Oi android emulator.
 
 #       # Runs a set of commands using the runners shell
