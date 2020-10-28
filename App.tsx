@@ -8,7 +8,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -16,6 +16,8 @@ import {
   View,
   Text,
   StatusBar,
+  Pressable,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -29,11 +31,14 @@ import {
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
+  const [stepTwoTextIsVisible, setStepTwoTextIsVisible] = useState(false)
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
+          testID={'mainScrollView'}
+          accessibilityLabel={'mainScrollView'}
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
@@ -44,19 +49,26 @@ const App = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+            <Text testID={'textDigit'} accessibilityLabel={'textDigit'} style={styles.sectionTitle}>Step {stepTwoTextIsVisible ? 'Two' : 'One'}</Text>
               <Text testID="Dashboard" style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.tsx</Text> to change
                 this screen and then come back to see your edits.
               </Text>
             </View>
             <View style={styles.sectionContainer}>
+
               <Text style={styles.sectionTitle}>See Your Changes</Text>
               <Text style={styles.sectionDescription}>
                 <ReloadInstructions />
               </Text>
             </View>
             <View style={styles.sectionContainer}>
+            <TouchableOpacity testID={'changeTextAbove'} accessibilityLabel={'changeTextAbove'} onPress={()=> setStepTwoTextIsVisible(true)}>
+              <Text>
+              Oi, mude o texto acima!
+              </Text>
+              </TouchableOpacity>
+
               <Text style={styles.sectionTitle}>Debug</Text>
               <Text style={styles.sectionDescription}>
                 <DebugInstructions />
