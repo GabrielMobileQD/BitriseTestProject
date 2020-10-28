@@ -32,7 +32,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - uses: burrunan/gradle-cache-action@v1
-        name: Build CI Test
+        name: Cache Gradle
         # Extra environment variables for Gradle execution (regular GitHub Actions feature)
         # Note: env must be outside of "with"
         env:
@@ -53,7 +53,7 @@ jobs:
           # Gradle version to use for execution:
           #   wrapper (default), current, rc, nightly, release-nightly, or
           #   vzersions like 6.6 (see https://services.gradle.org/versions/all)
-          gradle-version: wrapper
+          gradle-version: 6.2
           properties: |
             kotlin.js.compiler=ir
             kotlin.parallel.tasks.in.project=true
