@@ -12,4 +12,7 @@ describe('Example', () => {
     await element(by.id('mainScrollView')).swipe('down', 'slow');
     await expect(element(by.text('Step Two'))).toBeVisible();
   });
+  it('should have a visible Dashboard', async () => {
+    await expect(element(by.id('Dashboard'))).toBeVisible();
+  });
 });
