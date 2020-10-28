@@ -37,6 +37,12 @@ jobs:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
+      - name: Cache Gradle local packages
+        uses: actions/cache@v2
+        with:
+          path: android/.gradle
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*android/.gradle') }}
+          restore-keys: ${{ runner.os }}-gradle
         #npm cache files are stored in 
       - name: Setup detox-cli
         run: npm install -g detox-cli
