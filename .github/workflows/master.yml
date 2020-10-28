@@ -31,32 +31,12 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - uses: burrunan/gradle-cache-action@v1
-        name: Cache Gradle
-        # Extra environment variables for Gradle execution (regular GitHub Actions feature)
-        # Note: env must be outside of "with"
-        env:
-          VARIABLE: cache-gradle
+      - name: Cache Gradle packages
+        uses: actions/cache@v2
         with:
-          # If you have multiple jobs, use distinct job-id in in case you want to split caches
-          # For instance, jobs with different JDK versions can't share caches
-          # RUNNER_OS is added to job-id automatically
-          job-id: jdk8
-          # Specifies arguments for Gradle execution
-          # If arguments is missing or empty, then Gradle is not executed
-          #arguments: build
-          # arguments can be multi-line for better readability
-          # arguments: |
-          #  --no-paralell
-          #  build
-          #  -x test
-          # Gradle version to use for execution:
-          #   wrapper (default), current, rc, nightly, release-nightly, or
-          #   vzersions like 6.6 (see https://services.gradle.org/versions/all)
-          gradle-version: wrapper
-          properties: |
-            kotlin.js.compiler=ir
-            kotlin.parallel.tasks.in.project=true
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          restore-keys: ${{ runner.os }}-gradle
         #npm cache files are stored in 
       - name: Setup detox-cli
         run: npm install -g detox-cli
