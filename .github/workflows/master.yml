@@ -25,15 +25,17 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: ./node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}
+          path: |
+            ~/.npm
+            ./node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/lockfiles') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
         #npm cache files are stored in 
-      # - name: Setup detox-cli
-      #   run: npm install -g detox-cli
+      - name: Setup detox-cli
+        run: npm install -g detox-cli
       - name: Install npm dependencies
         run: npm install
       # - name: run an Android Emulator and run detox tests.
