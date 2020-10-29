@@ -58,11 +58,12 @@ jobs:
               avdmanager list avd
               detox build --c android.emu.release
               detox test -c android.emu.release 
-      - name: Uploading bundle test
-        uses: joabalea/App-Center-action@v1.0.2
+      - name: Deploy to Codepush tEST
+        uses: NishanthShankar/codepush-action@master
         with:
-          command: appcenter codepush release-react -a gabrielmenezes/CI_Test_App -d Staging
-          token: fuRxnaOd28H-JuYySyuSRerbeRbFwyYLaiFn5
+          args: release-react -d Staging
+        env:
+          APPCENTER_ACCESS_TOKEN: ec665ca1e8017b10b73818717dea3a444f14b33c
 #       # Runs a set of commands using the runners shell
 #       - name: Greetings for android build
 #         run: |
