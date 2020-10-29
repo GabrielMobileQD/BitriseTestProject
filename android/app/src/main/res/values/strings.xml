@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BitriseTestProject</string>
+     <string moduleConfig="true" name="CodePushDeploymentKey">fuRxnaOd28H-JuYySyuSRerbeRbFwyYLaiFn5</string>
 </resources>
