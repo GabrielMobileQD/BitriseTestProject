@@ -45,9 +45,9 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
         #npm cache files are stored in 
       - name: Setup detox-cli
-        run: npm install -g detox-cli
+        run: sudo npm install -g detox-cli
       - name: Install npm dependencies
-        run: npm install
+        run: sudo npm install
       - name: run an Android Emulator and run detox tests.
         uses: reactivecircus/android-emulator-runner@v2
         with:
