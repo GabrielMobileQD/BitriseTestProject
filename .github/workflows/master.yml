@@ -48,16 +48,16 @@ jobs:
         run: sudo npm install -g detox-cli
       - name: Install npm dependencies
         run: sudo npm install
-      - name: run an Android Emulator and run detox tests.
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-         api-level: 29
-         profile: Nexus One 
-         script: |
-              echo Oi, vou listar os avds disponiveis e apos isso rodar os testes em detox.
-              avdmanager list avd
-              detox build --c android.emu.release
-              detox test -c android.emu.release 
+      # - name: run an Android Emulator and run detox tests.
+      #   uses: reactivecircus/android-emulator-runner@v2
+      #   with:
+      #    api-level: 29
+      #    profile: Nexus One 
+      #    script: |
+      #         echo Oi, vou listar os avds disponiveis e apos isso rodar os testes em detox.
+      #         avdmanager list avd
+      #         detox build --c android.emu.release
+      #         detox test -c android.emu.release 
       - name: Deploy to Codepush tEST
         uses: NishanthShankar/codepush-action@master
         with:
