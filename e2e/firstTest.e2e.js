@@ -4,7 +4,7 @@ describe('Example', () => {
   });
 
   it('should have welcome screen', async () => {
-    await expect(element(by.id('Dashboard'))).toBeVisible();
+    await expect(element(by.id('Dashboardsss'))).toBeVisible();
   });
   it('should have a step two instead of a step one text', async () => {
     await element(by.id('mainScrollView')).swipe('up', 'slow');
