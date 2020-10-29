@@ -61,7 +61,7 @@ jobs:
       - name: Deploy to Codepush tEST
         uses: NishanthShankar/codepush-action@master
         with:
-          args: release-react -d Staging
+          args: release-react -a gabrielmenezes/CI_Test_App -d Staging 
         env:
           APPCENTER_ACCESS_TOKEN: ec665ca1e8017b10b73818717dea3a444f14b33c
 #       # Runs a set of commands using the runners shell
