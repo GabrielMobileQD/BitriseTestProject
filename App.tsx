@@ -54,31 +54,7 @@ const App = () => {
                 Edit <Text style={styles.highlight}>App.tsx</Text> to change
                 this screen and then come back to see your edits.
               </Text>
-              <Text testID={'textDigit'} accessibilityLabel={'textDigit'} style={styles.sectionTitle}>Step {stepTwoTextIsVisible ? 'Two' : 'One'}</Text>
-              <Text testID="Dashboard" style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
-              </Text>
-              <Text testID={'textDigit'} accessibilityLabel={'textDigit'} style={styles.sectionTitle}>Step {stepTwoTextIsVisible ? 'Two' : 'One'}</Text>
-              <Text testID="Dashboard" style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
-              </Text>
-              <Text testID={'textDigit'} accessibilityLabel={'textDigit'} style={styles.sectionTitle}>Step {stepTwoTextIsVisible ? 'Two' : 'One'}</Text>
-              <Text testID="Dashboard" style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
-              </Text>
-              <Text testID={'textDigit'} accessibilityLabel={'textDigit'} style={styles.sectionTitle}>Step {stepTwoTextIsVisible ? 'Two' : 'One'}</Text>
-              <Text testID="Dashboard" style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
-              </Text>
-              <Text testID={'textDigit'} accessibilityLabel={'textDigit'} style={styles.sectionTitle}>Step {stepTwoTextIsVisible ? 'Two' : 'One'}</Text>
-              <Text testID="Dashboard" style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
-              </Text>
+            
             </View>
             <View style={styles.sectionContainer}>
 
