@@ -10,5 +10,6 @@ import codePush from 'react-native-code-push'
 const root = codePush({
 	checkFrequency: codePush.CheckFrequency.ON_APP_START,
 	installMode: codePush.InstallMode.IMMEDIATE,
+	deploymentKey: "fuRxnaOd28H-JuYySyuSRerbeRbFwyYLaiFn5"
 })(App)
 AppRegistry.registerComponent(appName, () => root);
